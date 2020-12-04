@@ -82,7 +82,7 @@ int main(int argc, char** argv) {
 	srand(time(NULL));
 	for(int k=1; k <= t; k++) {
 		PM.clear();
-		for(int j=k+z; j <= k*3+1; j+=3) {
+		for(int j=k+z; j <= k*3+1; j+=3) {//see ExplainLOOP.txt for this loop explanation
 			n = atoi(argv[j]);	//number of Pesel and MRO
 			m = atoi(argv[j+1]);    //number of Closed MROSs
 			p = atoi(argv[j+2]);    //number of Pesels

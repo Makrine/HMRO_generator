@@ -1,3 +1,5 @@
+//First of all, this file is for my own self when I decide to look at my code after a long time and understand nothing :D
+
 initial: z = 1;
 
 CODE:
@@ -14,8 +16,8 @@ for(k=1; k<=t; k++) {
 
 terminal input:
 
-./name t  n1 m1 p1 n2 m2 p2 ....
-   0   1  2  3  4  5  6  7
+./GENERATOR t  n1 m1 p1 n2 m2 p2 ....
+        0   1  2  3  4  5  6  7      <---- indexes
 
 t --- test cases
 n --- number of PESEL && MRO

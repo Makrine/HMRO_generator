@@ -65,4 +65,4 @@ t=3
 					            |
 			                            |
 
-	                          	in Range of j k is incremented by two each time. so the number of increment of k is z so by the end of the loop we increment z by 2;
+	                          	in Range of j the incrementing of k is incremented by two each time. so the number of increment of k is z so by the end of the loop we increment z by 2;

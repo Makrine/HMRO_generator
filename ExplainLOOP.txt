@@ -1,0 +1,68 @@
+initial: z = 1;
+
+CODE:
+
+for(k=1; k<=t; k++) {
+	for(j=k+z; j <= k*3+1; j+=3)
+		...
+		z = z + 2;
+}
+
+
+
+
+
+terminal input:
+
+./name t  n1 m1 p1 n2 m2 p2 ....
+   0   1  2  3  4  5  6  7
+
+t --- test cases
+n --- number of PESEL && MRO
+m --- number of closed MROs
+p --- number of PESEls
+
+
+index of first n: 2
+index of first m: 3
+index of first p: 4
+
+index of 2nd n: 5
+index of 2nd m: 6
+index of 2nd p: 7
+
+index of 3rd n: 8
+index of 3rd m: 9
+index of 3rd p: 10
+
+...................................
+t=1 
+k=1;
+Range of j [k+z; k*3+1] ---> [2, 4]
+...................................
+
+
+...................................
+t=2
+1)	k=1;
+	Range of j [2, 4]		[k+1, k*3+1] 
+2)	k=2;	
+	Range of j [5, 7]		[k+3, k*3+1]
+...................................
+
+...................................
+t=3
+1)	k=1;
+	Range of j [2, 4]		              [k+1, k*3+1]	
+2)	k=2;
+	Range of j [5, 7]	              	[k+3, k*3+1]
+2)	k=3;
+	Range of j [8, 10]		            [k+5, k*3+1]
+...................................
+			    	                      	   ^
+					                             |
+			                          		   |
+			                          		   |
+	                          				   |
+
+	                          				in Range of j k is incremented by two each time. so the number of increment of k is z so by the end of the loop we increment z by 2;

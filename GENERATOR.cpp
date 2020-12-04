@@ -68,7 +68,7 @@ void PrintPESEL() {
 	cout << random_key << endl;
 }
 int main(int argc, char** argv) {
-	if(argc < 2) {cout << "Please enter\nThe number of test cases\nThe number of Pesel+MRO\nThe number of Closed MROs\nThe number of PESELS\n" << endl;
+	if(argc < 5) {cout << "Please enter\nThe number of test cases\nThe number of Pesel+MRO\nThe number of Closed MROs\nThe number of PESELS\n" << endl;
 		cout << "Here's how to use\n\n ./GENERATOR t n m p\n\nt=The number of test cases\nn=The number of Pesel+MRO\nm=The number of Closed MROs\np=The number of PESELS\n" << endl;
 		cout << "If you enter more than 1 test cases then add another n, m and p to the command for the each new test case" << endl;
 	}

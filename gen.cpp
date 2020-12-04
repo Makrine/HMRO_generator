@@ -1,4 +1,3 @@
-//THE CODE IS BEING CREATED
 #include <iostream>
 #include <string>
 #include <cmath>
@@ -13,7 +12,7 @@ string RandomPESEL() {
 	string pesel;
 	string m, d;
 	int x;
-	string xxxxx= "";
+	string xxxxx;
 
 	mm = 1 + rand()%12;
 	dd = 1 + rand()%31;
@@ -37,17 +36,12 @@ string RandomPESEL() {
 string RandomMRO() {
 
 	char c1, c2, c3, c4;
-	int r1, r2, r3, r4;
-	string mro = "";
+	string mro;
 
-	r1 = rand()%26;
-	r2 = rand()%26;
-	r3 = rand()%26;
-	r4 = rand()%10;
-	c1 = 'A' + r1;
-	c2 = 'A' + r2;
-	c3 = 'A' + r3;
-	c4 = '0' + r4;
+	c1 = 'A' + rand()%26;
+	c2 = 'A' + rand()%26;
+	c3 = 'A' + rand()%26;
+	c4 = '0' + rand()%10;
 	mro.push_back(c1);
 	mro.push_back(c2);
 	mro.push_back(c3);
@@ -55,6 +49,24 @@ string RandomMRO() {
 	return mro;
 }
 
+void PrintPM() {
+	for(auto& y: PM) cout << y.first << " " << y.second << endl;
+
+}
+
+void PrintMRO() {
+	auto it = PM.begin();
+        advance(it, rand() % PM.size());
+        string random_key = it->second;
+        cout << random_key;
+}
+
+void PrintPESEL() {
+	auto it = PM.begin();
+	advance(it, rand() % PM.size());
+	string random_key = it->first;
+	cout << random_key << endl;
+}
 int main(int argc, char** argv) {
 	int t = atoi(argv[1]); //number of TEST cases
 	int n;
@@ -65,10 +77,10 @@ int main(int argc, char** argv) {
 	srand(time(NULL));
 	for(int k=1; k <= t; k++) {
 		PM.clear();
-		for(int j=k+z; j <= k*3+1; j+=3) { //see ExplainLOOP.txt about this loop
-			n = atoi(argv[j]);
-			m = atoi(argv[j+1]);
-			p = atoi(argv[j+2]);
+		for(int j=k+z; j <= k*3+1; j+=3) {
+			n = atoi(argv[j]);	//number of Pesel and MRO
+			m = atoi(argv[j+1]);    //number of Closed MROSs
+			p = atoi(argv[j+2]);    //number of Pesels
 			cout << n <<endl;
 
 			for(int i=0; i<n; i++)
@@ -78,11 +90,14 @@ int main(int argc, char** argv) {
 				mro = RandomMRO();
 				PM[pesel] = mro;
 			}
-			for(auto& y: PM) cout << y.first << " " << y.second << endl;
-			cout << m << endl << p << endl << endl;
+			PrintPM();
+			cout << m << endl;
+			for(int i=0; i<m; i++) {PrintMRO(); cout << " "; PrintMRO(); cout << endl;}
+			cout << p << endl;
+			for(int i=0; i<p; i++) PrintPESEL();
+			cout << endl;
 			z+=2;
 		}
-
 	}
 	return 0;
 }

@@ -2,9 +2,13 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <unordered_map>
 using namespace std;
 
-void RandomPESEL() {
+unordered_map<string,string> PM;
+
+string RandomPESEL() {
+
 	int mm, dd;
 	string pesel;
 	string m, d;
@@ -27,10 +31,11 @@ void RandomPESEL() {
 		if(i==1) xxxxx += to_string(x);
 	}
 	pesel = "84" + m + d + xxxxx;
-	cout << pesel;
+	return pesel;
 }
 
-void RandomMRO() {
+string RandomMRO() {
+
 	char c1, c2, c3, c4;
 	int r1, r2, r3, r4;
 	string mro = "";
@@ -47,29 +52,37 @@ void RandomMRO() {
 	mro.push_back(c2);
 	mro.push_back(c3);
 	mro.push_back(c4);
-	cout << mro;
+	return mro;
 }
 
 int main(int argc, char** argv) {
 	int t = atoi(argv[1]); //number of TEST cases
 	int n;
+	int m, p;
+	int z = 1;
+	string pesel, mro;
 	cout << t << endl;
-	while(t--) {
-		for(int j=2; j < argc; j++) {
+	srand(time(NULL));
+	for(int k=1; k <= t; k++) {
+		PM.clear();
+		for(int j=k+z; j <= k*3+1; j+=3) { //sea README about this loop
 			n = atoi(argv[j]);
-			cout << n << endl;
+			m = atoi(argv[j+1]);
+			p = atoi(argv[j+2]);
+			cout << n <<endl;
 
-			srand(time(NULL));
 			for(int i=0; i<n; i++)
 			{
 
-				RandomPESEL();
-				cout << " ";
-				RandomMRO();
-				cout << endl;
+				pesel = RandomPESEL();
+				mro = RandomMRO();
+				PM[pesel] = mro;
 			}
-			cout << endl;
+			for(auto& y: PM) cout << y.first << " " << y.second << endl;
+			cout << m << endl << p << endl << endl;
+			z+=2;
 		}
+
 	}
 	return 0;
 }

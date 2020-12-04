@@ -26,6 +26,26 @@ m1 (and all m) is the number of CLOSED MROs
 
 p1 (and all p) is the number of PESELs
 
+### Windows:
+
+
+Compile the file GENERATOR.cpp by the command:
+
+``` g++ -o GENERATOR GENERATOR.cpp ```
+
+
+In order to use the generator execute the file GENERATOR in CMD by the command
+
+``` GENERATOR.exe t n1 m1 p1 n2 m2 p2 [other n m p] ```
+
+Where t is the number of TEST CASES
+
+n1 (and all n) is the number of PESEL codes and MROs
+
+m1 (and all m) is the number of CLOSED MROs
+
+p1 (and all p) is the number of PESELs
+
 
 #### EXAMPLE1:
 

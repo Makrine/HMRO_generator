@@ -4,7 +4,7 @@ This is a generator for test cases for the SPOJ problem HMRO - Help the Military
 
 https://www.spoj.com/problems/HMRO/
 
-If you have any suggestion don't hesitate to email me tmakrine@gmail.com or edit the code :)
+If you have any suggestions don't hesitate to email me tmakrine@gmail.com and feel free to edit the code :)
 
 ## HOW TO USE:
 

@@ -51,7 +51,9 @@ p1 (and all p) is the number of PESELs
 
 COMMAND:
 ```
-./GENERATOR 1 5 2 3 
+./GENERATOR 1 5 2 3   <--- LINUX 
+
+GENERATOR.exe 1 5 2 3 <--- WINDOWS 
 ```
 OUTPUT:
 ```
@@ -76,7 +78,9 @@ TDK9 BOQ6
 
 COMMAND:
 ```
-./GENERATOR 2 6 1 4 10 3 5
+./GENERATOR 2 6 1 4 10 3 5      <--- LINUX
+
+GENERATOR.exe 2 6 1 4 10 3 5    <--- WINDOWS
 ```
 
 OUTPUT:

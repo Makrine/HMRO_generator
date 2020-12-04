@@ -1,4 +1,6 @@
 //First of all, this file is for my own self when I decide to look at my code after a long time and understand nothing :D
+//This file explains one for loop used in the code. It took me a while to come up with this loop so I know it might be a bit hard to understand it at first. 
+//And I know it would be hard for me to remember why I wrote it this way
 
 initial: z = 1;
 

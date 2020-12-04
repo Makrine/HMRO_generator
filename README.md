@@ -17,7 +17,7 @@ In order to use the generator execute the file GENERATOR in terminal by the comm
 
 ``` ./GENERATOR t n1 m1 p1 n2 m2 p2 [other n m p] ```
 
-Where t is the number of TEST CASES \n
+Where t is the number of TEST CASES
 n1 (and all n) is the number of PESEL codes and MROs
 m1 (and all m) is the number of CLOSED MROs
 p1 (and all p) is the number of PESELs

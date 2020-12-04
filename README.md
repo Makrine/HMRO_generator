@@ -13,12 +13,12 @@ In order to use the generator execute the file GENERATOR in terminal by the comm
 
 ``` ./GENERATOR t n1 m1 p1 n2 m2 p2 [other n m p] ```
 
-Where t is the number of TEST CASES
+Where t is the number of TEST CASES \n
 n1 (and all n) is the number of PESEL codes and MROs
 m1 (and all m) is the number of CLOSED MROs
 p1 (and all p) is the number of PESELs
 
-### EXAMPLE1:
+#### EXAMPLE1:
 
 COMMAND:
 ```
@@ -38,12 +38,12 @@ IZO3 TDK9
 TDK9 BOQ6
 3
 84060890706
-84060890706
+84091971087
 84021818710
 ```
 
 
-## EXAMPLE2:
+#### EXAMPLE2:
 
 COMMAND:
 ```

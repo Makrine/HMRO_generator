@@ -65,7 +65,7 @@ int main(int argc, char** argv) {
 	srand(time(NULL));
 	for(int k=1; k <= t; k++) {
 		PM.clear();
-		for(int j=k+z; j <= k*3+1; j+=3) { //sea README about this loop
+		for(int j=k+z; j <= k*3+1; j+=3) { //see ExplainLOOP.txt about this loop
 			n = atoi(argv[j]);
 			m = atoi(argv[j+1]);
 			p = atoi(argv[j+2]);
